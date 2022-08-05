@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+#card{
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+    
+}
+#card1{
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    
+}
+
+.vitrineone{
+    
+   width: 15rem;
+   height: 15rem;
+   background-color:#ccc;
+   border-radius: 2rem;
+   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.397);
+   overflow: hidden;
+   text-align: center;
+
+}
+
+.vitrinetwo{
+    width: 15rem;
+    height: 15rem;
+    background-color:#ccc;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.397);
+    overflow: hidden;
+    text-align: center;
+    
+}
+
+.vitrinethree{
+    width: 15rem;
+    height: 15rem;
+    background-color:#ccc;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.397);
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.vitrinefor{
+    width: 15rem;
+    height: 15rem;
+    background-color:#ccc;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.397);
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.vitrinefive{
+    width: 15rem;
+    height: 15rem;
+    background-color:#ccc;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.397);
+    overflow: hidden;
+    text-align: center;
+
+}
+.vitrinesix{
+    width: 15rem;
+    height: 15rem;
+    background-color:#ccc;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.397);
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.product{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    justify-content: space-between;
+}
+
