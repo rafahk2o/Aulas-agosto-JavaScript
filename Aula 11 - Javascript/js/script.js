@@ -10,9 +10,29 @@ $.ajax({
         let posicao = 0;
         while (posicao < produtos.length) {
             vitrine += `<div class="vitrineone">`;
-                
+            vitrine += `<div class="card">
+            <img class="card-img-top" src= "img/${produtos[posicao].img}">
+            < div class = "card-body text center">
+            <h5 class="card-title">${produtos[posicao].nome}</h5>`;
+            produtos[posicao].categoria.forEach(categoria => {
+                if (categoria == "women")
+                    vitrine += `<span class="badge bg-danger me-2>${categoria}</span>"`;
+                else if (categoria == "man")
+                    vitrine += `<span class="badge bg-primary me-2>${categoria}</span>"`;
+                else if (categoria == "shoes")
+                    vitrine += `<span class="badge bg-info me-2>${categoria}</span>"`;
+                else if (categoria == "t-shirt")
+                    vitrine += `<span class="badge bg-light me-2>${categoria}</span>"`;
 
+            });
 
+            const preco = produtos[posicao].preco;
+            vitrine += `<p class="card-text">${preco.tolocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</p>
+            <button class="btn btn-success">Adicionar ao carrinho</button>`;
+            vitrine += `</div>
+      </div>
+    </div>`
+            posicao++;
         }
         produtoLista.html(vitrine)
     }
