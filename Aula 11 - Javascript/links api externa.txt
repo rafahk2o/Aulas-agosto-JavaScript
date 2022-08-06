@@ -1,0 +1,2 @@
+https://mocki.io/v1/7566a8a3-5dac-40ef-97e9-00bf90b849fa - API Produtos
+https://mocki.io/v1/886555e7-956e-4ce3-af25-cc8c6c4760ce - API Carrinho

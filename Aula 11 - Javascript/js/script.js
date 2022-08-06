@@ -1,5 +1,6 @@
 let vitrineone = $("#vitrineone");
 let produtoLista = $("#produto-lista");
+let product = $(".product");
 
 
 $.ajax({
@@ -43,9 +44,19 @@ function carrinho() {
         url: "http://10.24.78.52:5000/api/carrinho",
         success: (listaCarrinho) => {
             listaCarrinho.produtos.map(produto => {
-                console.log(produto)
-            })
+                const produto1 = listaCarrinho;
+               let produtos2 = "";
+               produtos2 += `<div class="product">
+               <h5 class="card8-title">${produto1.nome}</h5>
+               </div>`;
+               
 
+
+
+
+                console.log(produto.nome)
+            })
+             
         }
     })
 }
