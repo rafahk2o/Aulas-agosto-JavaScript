@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
+    <link rel="stylesheet" href="/Aula 11 - Javascript/css/style.css">
+    <script src="/Aula 11 - Javascript/js/jquery.js" defer></script>
+    <script src="/Aula 11 - Javascript/js/script.js" defer></script>
+    <title>Fale Conosco</title>
 </head>
-<div class="container-form">
+<body>
+    <div class="container-form">
     <form action="">
+        <div class="text-form">
+            <h2>Formulário de contato</h2>
+            <p>Preencha os dados abaixo e entre em contato conosco:</p>
+        </div>
        <label for=""><input type="text" id="name" name="name" placeholder="Digite o nome"></label> 
        <label for=""><input type="text" id="email" name="email" placeholder="Digite o e-mail"></label> 
        <label for=""><input type="text" id="telefone" name="telefone" placeholder="Digite o telefone"></label> 
-       <label for=""><input type="text-area" id="mensagem" name="mensagem" placeholder="Digite uma mensagem"></label> 
+       <label for=""><input type="text" id="assunto" name="assunto" placeholder="Digite o assunto"></label> 
+       <label for=""><textarea id="mensagem-text" name="mensagem" placeholder="Digite uma mensagem"></textarea></label> 
+       <button id="btn-form">Enviar</button>   
     </form>
-</div>
-
-<body>
     
+  
+</div>
 </body>
 </html>

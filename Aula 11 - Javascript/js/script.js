@@ -11,8 +11,8 @@ $.ajax({
         while (posicao < produtos.length) {
             vitrine += `<div class="vitrineone">`;
             vitrine += `<div class="card">
-            <img class="card-img-top" src= "img/${produtos[posicao].img}">
-            < div class = "card-body text center">
+            <img class="card-img-top" src="img/${produtos[posicao].img}">
+            <div class="card-body text-center">
             <h5 class="card-title">${produtos[posicao].nome}</h5>`;
             produtos[posicao].categoria.forEach(categoria => {
                 if (categoria == "women")
@@ -27,7 +27,7 @@ $.ajax({
             });
 
             const preco = produtos[posicao].preco;
-            vitrine += `<p class="card-text">${preco.tolocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</p>
+            vitrine += `<p class="card-text">${preco.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</p>
             <button class="btn btn-success">Adicionar ao carrinho</button>`;
             vitrine += `</div>
       </div>
@@ -37,3 +37,15 @@ $.ajax({
         produtoLista.html(vitrine)
     }
 })
+
+function carrinho() {
+    $.ajax({
+        url: "http://10.24.78.52:5000/api/carrinho",
+        success: (listaCarrinho) => {
+            listaCarrinho.produtos.map(produto => {
+                console.log(produto)
+            })
+
+        }
+    })
+}

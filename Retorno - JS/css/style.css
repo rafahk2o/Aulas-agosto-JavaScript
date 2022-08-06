@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    position: relative;
+    background-color: #222;
+    height: 300px;
+    color: #fff;
+    
+}
+#form-cadastro{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 80%;
+    
+}
+
+#btn{
+   width: 10rem;
+   height: 3rem;
+   background-color: aquamarine;
+   border: none;
+   cursor: pointer;
+   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.418);
+   font-family: 'Roboto'
+
+}
+
+.lista {
+    width: 20%;
+    height: 25%;
+    background-color: rgb(211, 211, 211);
+    position: absolute;
+    right: 2rem;
+    top: 145px;
+    overflow: auto;
+    right: 40rem;
+    top: 20rem;
+    line-height: 2rem;
+    
+  }
