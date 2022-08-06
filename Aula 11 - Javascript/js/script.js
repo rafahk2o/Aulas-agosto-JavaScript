@@ -1,62 +1,86 @@
-let vitrineone = $("#vitrineone");
+// let vitrineone = $("#vitrineone");
 let produtoLista = $("#produto-lista");
-let product = $(".product");
-
-
-$.ajax({
-    url: "http://10.24.78.52:5000/api/produtos",
-    success: (lista) => {
-        const produtos = lista.produtos;
-        let vitrine = "";
-        let posicao = 0;
-        while (posicao < produtos.length) {
-            vitrine += `<div class="vitrineone">`;
-            vitrine += `<div class="card">
+let produtoCart = $("#produto-cart");
+let vitrineTwo = $(".vitrinetwo");
+let inputQuant = $("#input-quant");
+function produtoIndex() {
+    $.ajax({
+        url: "https://mocki.io/v1/7566a8a3-5dac-40ef-97e9-00bf90b849fa",
+        success: (lista) => {
+            const produtos = lista.produtos;
+            let vitrine = "";
+            let posicao = 0;
+            while (posicao < produtos.length) {
+                vitrine += `<div class="vitrineone">`;
+                vitrine += `<div class="card">
             <img class="card-img-top" src="img/${produtos[posicao].img}">
             <div class="card-body text-center">
             <h5 class="card-title">${produtos[posicao].nome}</h5>`;
-            produtos[posicao].categoria.forEach(categoria => {
-                if (categoria == "women")
-                    vitrine += `<span class="badge bg-danger me-2>${categoria}</span>"`;
-                else if (categoria == "man")
-                    vitrine += `<span class="badge bg-primary me-2>${categoria}</span>"`;
-                else if (categoria == "shoes")
-                    vitrine += `<span class="badge bg-info me-2>${categoria}</span>"`;
-                else if (categoria == "t-shirt")
-                    vitrine += `<span class="badge bg-light me-2>${categoria}</span>"`;
+                produtos[posicao].categoria.forEach(categoria => {
+                    if (categoria == "women")
+                        vitrine += `<span class="badge bg-danger me-2>${categoria}</span>"`;
+                    else if (categoria == "man")
+                        vitrine += `<span class="badge bg-primary me-2>${categoria}</span>"`;
+                    else if (categoria == "shoes")
+                        vitrine += `<span class="badge bg-info me-2>${categoria}</span>"`;
+                    else if (categoria == "t-shirt")
+                        vitrine += `<span class="badge bg-light me-2>${categoria}</span>"`;
 
-            });
+                });
 
-            const preco = produtos[posicao].preco;
-            vitrine += `<p class="card-text">${preco.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</p>
+                const preco = produtos[posicao].preco;
+                vitrine += `<p class="card-text">${preco.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</p>
             <button class="btn btn-success">Adicionar ao carrinho</button>`;
-            vitrine += `</div>
+                vitrine += `</div>
       </div>
     </div>`
-            posicao++;
+                posicao++;
+            }
+            produtoLista.html(vitrine)
         }
-        produtoLista.html(vitrine)
-    }
-})
+    })
+
+}
+
 
 function carrinho() {
     $.ajax({
-        url: "http://10.24.78.52:5000/api/carrinho",
+        url: "https://mocki.io/v1/886555e7-956e-4ce3-af25-cc8c6c4760ce ",
         success: (listaCarrinho) => {
+            let produtos2 = "";
             listaCarrinho.produtos.map(produto => {
-                const produto1 = listaCarrinho;
-               let produtos2 = "";
-               produtos2 += `<div class="product">
-               <h5 class="card8-title">${produto1.nome}</h5>
-               </div>`;
-               
+                produtos2 += `<div class="vitrinetwo">
+                <h2 class="card-title">${produto.nome}</h2>
+                <div class="vitrinetwo-preco"> ${produto.preco}</div>
+                <img class="card-img-top" src="img/${produto.img}">
+                <div class="btn-quant"><button btn-quant1>-</button>
+                <input type="number" id="input-quant"${produto.quantidade}>
+                <button btn-quant2>+</button>
+                </div>
+                </div>`
+
+                $(".btn-quant2").click(() => {
+                    let quant3 = 1;
+                    inputQuant.val(quant3)
+                    quant3++;
+                })
 
 
 
 
-                console.log(produto.nome)
+
+
+
+
+
+
+
+
+
+                console.log(produtos2)
+
             })
-             
+            produtoCart.html(produtos2)
         }
     })
 }
