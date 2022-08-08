@@ -48,7 +48,7 @@ function carrinho() {
         url: "https://mocki.io/v1/886555e7-956e-4ce3-af25-cc8c6c4760ce ",
         success: (listaCarrinho) => {
             // IMPORTANTE!!! VARIÁVEL ACUMULADORA DEVE SER DECLARADA FORA DO LAÇO DE REPETIÇÃO!!!
-            let produtos2 = ""; 
+            let produtos2 = "";
             listaCarrinho.produtos.map(produto => {
                 produtos2 += `<div class="vitrinetwo">
                 <h2 class="card-title">${produto.nome}</h2>
@@ -60,22 +60,7 @@ function carrinho() {
                 </div>
                 </div>`
 
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
                 console.log(produtos2)
-
             })
             produtoCart.html(produtos2)
         }
