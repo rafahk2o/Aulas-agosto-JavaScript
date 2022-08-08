@@ -68,6 +68,13 @@ body {
 
 }
 
+.img-topo-cart img{
+    position: absolute;
+    width: 3rem;
+    right: 5rem;
+    top: 1rem;
+}
+
 .topo-cart h2 {
     color: white;
     margin-left: 5rem;
@@ -183,3 +190,4 @@ body {
     cursor: pointer;
     color: white;
 }
+
