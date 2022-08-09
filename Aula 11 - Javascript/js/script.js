@@ -3,6 +3,7 @@ let produtoLista = $("#produto-lista");
 let produtoCart = $("#produto-cart");
 let vitrineTwo = $(".vitrinetwo");
 let inputQuant = $("#input-quant");
+let cep = $("#cep");
 function produtoIndex() {
     $.ajax({
         url: "https://mocki.io/v1/7566a8a3-5dac-40ef-97e9-00bf90b849fa",
@@ -52,17 +53,47 @@ function carrinho() {
             listaCarrinho.produtos.map(produto => {
                 produtos2 += `<div class="vitrinetwo">
                 <h2 class="card-title">${produto.nome}</h2>
-                <div class="vitrinetwo-preco"> ${produto.preco}</div>
+                <div class="vitrinetwo-preco">R$ ${produto.preco}</div>
                 <img class="card-img-top" src="img/${produto.img}">
-                <div class="btn-quant"><button btn-quant1>-</button>
-                <input type="number" id="input-quant"${produto.quantidade}>
-                <button btn-quant2>+</button>
+                <div class="btn-quant"><button class="btn-quant1">-</button>
+                <span>${produto.quantidade}</span>
+                <button class="btn-quant2">+</button>
                 </div>
                 </div>`
-
                 console.log(produtos2)
             })
+
             produtoCart.html(produtos2)
         }
     })
 }
+
+cep.on("keyup", () => {
+    if (cep.val().length == 8){
+        $.ajax({
+            url: `https://viacep.com.br/ws/${cep.val()}/json/`,
+            success: (dadosCep) => {
+                console.log(dadosCep)
+                // cep.prop('disabled', true)
+                $("#retorno").val(dadosCep.cep);
+            $("#retorno2").val(dadosCep.logradouro);
+            $("#retorno3").val(dadosCep.localidade);
+            $("#retorno4").val(dadosCep.cidade);
+            $("#retorno5").val(dadosCep.bairro);
+            $("#retorno6").val(dadosCep.uf);
+            }
+        })
+    }
+})
+
+
+
+$('#reset-val').click(function() {
+    $('#retorno').val("");
+})
+
+
+
+
+
+
