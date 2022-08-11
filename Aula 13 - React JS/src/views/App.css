@@ -98,6 +98,12 @@ body {
 
 }
 
+.geral{
+    display: flex;
+    gap: 4rem;
+    margin-left: 4.5rem;
+}
+
 .vitrinetwo {
     display: flex;
     justify-content: space-around;

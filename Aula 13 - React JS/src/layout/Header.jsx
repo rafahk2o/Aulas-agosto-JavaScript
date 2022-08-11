@@ -2,8 +2,8 @@ function Header(){
     return(
         <header>
            
-    <div class="topo">
-        <div class="topo-text">
+    <div className="topo">
+        <div className="topo-text">
             <h1>Loja virtual Senac</h1>
         </div>
 
