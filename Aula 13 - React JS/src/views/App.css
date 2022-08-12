@@ -127,7 +127,7 @@ body {
 .geral{
     display: flex;
     gap: 4rem;
-    margin-left: 4.5rem;
+    margin: 2rem;
 }
 
 .vitrinetwo {

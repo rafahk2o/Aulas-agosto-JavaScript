@@ -33,14 +33,14 @@ class Vitrine extends Component {
                     this.state.dadosProdutos.map(produto => (
                         <div className="vitrineone" key={produto.id}>
                             <div className="card">
-                            <img className="card-img-top" src={"assets/img/" + produto.img}/>
-                            <div className="card-body text-center">
-                            <h2 className="card-title">{produto.nome}</h2>
-                            <h3 className="card-title">{produto.preco}</h3>
-                            <h4 className="card-title">{produto.categoria}</h4>
-                            <button className="btn btn-success">Adicionar ao carrinho</button>
+                                <img className="card-img-top" src={"assets/img/" + produto.img} />
+                                <div className="card-body text-center">
+                                    <h2 className="card-title">{produto.nome}</h2>
+                                    <h3 className="card-title">{produto.preco}</h3>
+                                    <h4 className="card-title">{produto.categoria}</h4>
+                                    <button className="btn btn-success">Adicionar ao carrinho</button>
 
-                                </div>  
+                                </div>
                             </div>
 
 
