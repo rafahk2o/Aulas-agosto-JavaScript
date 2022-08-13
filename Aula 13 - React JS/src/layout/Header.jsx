@@ -16,6 +16,9 @@ function Header() {
                 <div className="carrinho-top">
                     <a href="/carrinho">Carrinho</a>
                 </div>
+                <div className="carrinho-top">
+                    <a href="/formulario">Endereço</a>
+                </div>
 
 
             </div>

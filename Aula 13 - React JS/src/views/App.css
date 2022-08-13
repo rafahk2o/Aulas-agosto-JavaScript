@@ -244,17 +244,66 @@ body {
 }
 
 #retorno-cep{
-    width: 40%;
-    height: 10rem;
+    width: 30%;
+    height: 30rem;
     margin: 10rem 10rem 10rem 4rem;
     display: flex;
-    flex-direction: column;
     gap: 2rem;
     background-color: #ffffff;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.178);
     justify-content: center;
    
 }
+
+.retorno-cep1{
+    margin: 0.5rem
+}
+
+.retorno-cep1 input{
+    margin: 0.5rem;
+    width: 20rem;
+    height: 2rem;
+    
+}
+.retorno-cep21 input{
+    margin: 0.5rem;
+    width: 20rem;
+    height: 2rem;
+    
+}
+.retorno-cep22 input{
+    margin: 0.5rem;
+    width: 20rem;
+    height: 2rem;
+    
+}
+
+.retorno-cep1 label{
+    display: block;
+    margin-left: 0.5rem;
+}
+.retorno-cep21 label{
+    display: block;
+    
+}
+.retorno-cep22 label{
+    display: block;
+    
+}
+
+.retorno-cep2{
+    display: block;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+.retorno-cep2 label{
+    margin-left: 0.5rem;
+    
+}
+
+
 
 #reset-val{
     width: 5rem;
