@@ -36,10 +36,10 @@ class Vitrine extends Component {
                                 <img className="card-img-top" src={"assets/img/" + produto.img} />
                                 <div className="card-body text-center">
                                     <h2 className="card-title">{produto.nome}</h2>
-                                    <h3 className="card-title">{produto.preco}</h3>
-                                    <h4 className="card-title">{produto.categoria}</h4>
+                                    <h3 className="card-title">{produto.preco}</h3><br />
+                                    <h4 className="card-title">{produto.categoria[0]}</h4><br />
+                                    <h4 className="card-title">{produto.categoria[1]}</h4>
                                     <button className="btn btn-success">Adicionar ao carrinho</button>
-
                                 </div>
                             </div>
 

@@ -21,7 +21,7 @@ export default function FormularioCep() {
                     </div>
 
                 </div>
-            </fieldset>
+            </fieldset> 
         </div>
 
     )

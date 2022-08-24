@@ -34,9 +34,9 @@ export default class Carrinho extends Component {
                             <h2 className="card-title">{produto.nome}</h2>
                             <div className="vitrinetwo-preco">R${produto.preco}</div>
                             <img className="card-img-top" src={"assets/img/" + produto.img} />
-                            <div className="btn-quant"><button className="btn-quant1">-</button>
-                                <span>{produto.quantidade}</span>
-                                <button className="btn-quant2">+</button>
+                            <div className="btn-quant"><button className="btn-quant2">+</button>
+                                <span id="camp-quant">{produto.quantidade}</span>
+                                <button className="btn-quant1">-</button>
                             </div>
                         </div>
                     ))

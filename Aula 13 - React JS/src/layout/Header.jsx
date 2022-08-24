@@ -1,3 +1,6 @@
+
+import { Link } from "react-router-dom"
+
 function Header() {
     return (
         <header>
@@ -7,20 +10,14 @@ function Header() {
                 <div className="topo-text">
                     <h1>Loja virtual Senac</h1>
                 </div>
-                <div className="vitrine-top">
-                    <a href="/vitrine">Vitrine</a>
+                <div className="menu-header">
+                    <ul>
+                        <li><Link to="/vitrine">Vitrine</Link></li>
+                        <li><Link to="/contato">Fale Conosco</Link></li>
+                        <li><Link to="/carrinho">Carrinho</Link></li>
+                        <li><Link to="/formulario">Endereço</Link></li>
+                    </ul>
                 </div>
-                <div className="FaleConosco">
-                    <a href="/contato">Fale Conosco</a>
-                </div>
-                <div className="carrinho-top">
-                    <a href="/carrinho">Carrinho</a>
-                </div>
-                <div className="carrinho-top">
-                    <a href="/formulario">Endereço</a>
-                </div>
-
-
             </div>
             <div id="produto-lista">
 

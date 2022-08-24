@@ -113,7 +113,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 15rem;
-    height: 20rem;
+    height: 22rem;
     background-color: rgb(255, 255, 255);
     border-radius: .5rem;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.212);
@@ -226,6 +226,10 @@ body {
     border: none;
     cursor: pointer;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 #btn-cart1{
@@ -246,7 +250,7 @@ body {
 #retorno-cep{
     width: 30%;
     height: 30rem;
-    margin: 10rem 10rem 10rem 4rem;
+    margin: 5rem 5rem 10rem 4rem;
     display: flex;
     gap: 2rem;
     background-color: #ffffff;
@@ -327,6 +331,23 @@ body {
 .geralCarrinho{
     width: 100%;
     height: 100vh;
+}
+
+#camp-quant{
+   width: 4rem;
+   height: 2rem;
+  
+}
+
+.menu-header ul{
+    display: flex;
+    list-style: none;
+   
+
+}
+
+.menu-header li{
+    margin: 2.5rem;   
 }
 
 
